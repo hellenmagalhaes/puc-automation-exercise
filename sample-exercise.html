@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Sample page</title><script type='text/javascript'> function getRandomInt(max) {return Math.floor(Math.random() * Math.floor(max)); }function shuffle(array) {var currentIndex = array.length, temporaryValue, randomIndex; while (0 !== currentIndex) {randomIndex = Math.floor(Math.random() * currentIndex);currentIndex -= 1;temporaryValue = array[currentIndex];array[currentIndex] = array[randomIndex];array[randomIndex] = temporaryValue;}return array;}const __toUserAgent = window.navigator.userAgent; Object.defineProperty(window.navigator, "userAgent", { get: function() { return __toUserAgent +  '/6GbyUzUe-41'; } });var testPlugins = []; for(var s = 0; s < window.navigator.plugins.length; s++) {const plg = {'name': window.navigator.plugins[s].name,'description': window.navigator.plugins[s].description,'filename': window.navigator.plugins[s].filename,};plg[0]= {'type': window.navigator.plugins[s][0].type,'suffixes': window.navigator.plugins[s][0].suffixes,'description': window.navigator.plugins[s][0].description};testPlugins.push(plg);}if({'name':'GLS', 'description': 'glsslg.dll', 'filename': 'gLs playcheck plugin','0':{'type': '', 'suffixes': '', 'description': 'application / gls - slg'} },{'name':'EmailChecker', 'description': 'emailchecker.dll', 'filename': 'Email checking plugin','0':{'type': '', 'suffixes': '', 'description': 'application / email - checker'} },{'name':'GLS', 'description': 'glsslg.dll', 'filename': 'gLs playcheck plugin','0':{'type': '', 'suffixes': '', 'description': 'application / gls - slg'} }) testPlugins.push({'name':'GLS', 'description': 'glsslg.dll', 'filename': 'gLs playcheck plugin','0':{'type': '', 'suffixes': '', 'description': 'application / gls - slg'} },{'name':'EmailChecker', 'description': 'emailchecker.dll', 'filename': 'Email checking plugin','0':{'type': '', 'suffixes': '', 'description': 'application / email - checker'} },{'name':'GLS', 'description': 'glsslg.dll', 'filename': 'gLs playcheck plugin','0':{'type': '', 'suffixes': '', 'description': 'application / gls - slg'} }); testPlugins = shuffle(testPlugins); Object.defineProperty(window.navigator, "plugins", { get: function() { return testPlugins; }, enumerable: true, configurable: true}); </script>
+</head>
+
+<body>
+    <h1>Basic page</h1>
+    <div>
+      <button name="generate" onclick="generate()">generate and wait, please</button>
+      <p id="my-value"></p>
+    </div>
+    <div>
+     <input id="input" value="garbage">
+     <button name="button" onclick="myFunction()">test</button>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        function myFunction() {
+	    alert("Done!");
+            let txt = document.getElementById("input").value;
+            document.getElementById("result").innerHTML = "It workls! " + txt + "!";
+        };
+        function generate() {
+            document.getElementById("my-value").innerHTML = "";
+            let r = (Math.random() + 1).toString(36).substring(7);
+            let n = Math.floor(Math.random() * 5) * 1000;
+            setTimeout(() => {
+              document.getElementById("my-value").innerHTML = r;
+            }, n);
+            
+        };
+    </script>
+</body>
+
+</html>
